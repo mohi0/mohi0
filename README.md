@@ -1,8 +1,7 @@
-- 👋 Hi, I’m @mohi0
-- 👀 I’m interested in Computer Programming
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+Hi this is Mohi. 
+I Code. 
+I make mobile applications, desktop applications, APIs, web applications and I like to explore. 
+
 
 <!---
 mohi0/mohi0 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
