@@ -1,6 +1,12 @@
-Hi this is Mohi. 
+Hi this is Mohi.   
 I Code. 
-I make mobile applications, desktop applications, APIs, web applications and I like to explore. 
+I like to make:
+- 📱 Mobile apps
+- 💻 desktop applications 
+- 📪 APIs
+- 🌐 web applications
+
+
 
 
 <!---
