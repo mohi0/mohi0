@@ -1,10 +1,32 @@
-Hi this is Mohi.   
-I Code. 
-I like to make:
+Hi this is Mohi.
+--------------
+## I am a computer programmer 
+
+I develop:
 - 📱 Mobile apps
+  - React Native
+  - Android (SDK) (Kotlin programming Language)
+  - iOS Apps (Swift)
 - 💻 desktop applications 
+  - Electron Js 
+  - wxWidgets C++
+  - Swing Java 
+  - .NET (WPF UWP)
+  - Cocoa (Swift)
 - 📪 APIs
+  - Node Js
+  - Express Js 
 - 🌐 web applications
+  - Vue JS 
+  - Nuxt JS
+- 🛢 Databases 
+  - MySQL 
+  - MongoDB
+  - SQLite
+  - MsSQL
+ 
+
+
 
 
 
