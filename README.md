@@ -1,4 +1,4 @@
-Hi this is Mohi.
+ Hi this is Mohi.
 --------------
 ## I am a computer programmer 
 
@@ -26,35 +26,35 @@ I develop:
   - MsSQL
  
  ## My Projects: 
- Here are some of my projects I have worked on as a developer 
+ Here are some of my projects I have worked on as a developer  
  
- - Air quality App:
+ - 🌬 Air quality App  :
  An android applictaion that uses a REST API to show pollution in different places
  Techstack: Android Jetpack Compose 
             Native iOS (Swift)
  
- - QR Code / Bar Code app:
+ - ⬛️ QR Code / Bar Code app:
  An android app that can be used to make / generate qrcode and scan qr code / bar code. User can see the link without directly openning it. 
  Techstack: Native Android (Kotlin)
  
-- To Do List App:
+- ✅ To Do List App:
   A simple todo list android application.
   Techstack: Native Android (Kotlin)
   
 
-- DB admin app:
+- 👤 DB admin app:
   A desktop application that can be used to manage MySQL and MongoDB databases. A GUI solution to work with both MySQL and MongoDB from a single      application.
   Techstack: ElectronJs, VueJs
   
-- Goods Carrier App:
+- 🚛 Goods Carrier App:
   An app that can be used for keeping the record of loading the truck, unload and then generate a receipt 
   Techstack: Native Android (Java)
   
-- Recipe App:
+- 🍟 Recipe App:
   An app that can be used to post new recipes and browse new recipes based on the user's prefrences (Likes and dislikes)
   Techstack: Native Android (Kotlin), Backend REST API (NodeJs / ExpressJs)
   
-- REST API Tool 
+- 📪 REST API Tool 
   A desktop application which can be used to send requests to an API and see the JSON response from the server
   Techstack: ElectronJs and VueJs
 
