@@ -40,6 +40,9 @@ I develop:
 - ✅ To Do List App:
   A simple todo list android application.
   Techstack: Native Android (Kotlin)
+
+- School Admin App:
+  Built with C++ using wxWidegts library, allows basic course registration, student profile management. supports Windows, MacOS, Linux
   
 
 - 👤 DB admin app:
