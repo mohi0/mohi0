@@ -13,6 +13,10 @@ I develop:
   - Swing Java 
   - .NET (WPF UWP)
   - Cocoa (Swift)
+- IoT 📱💡
+  - RTOS
+  - Wifi, BLE, MQTTT
+  - Embedded C language
 - 📪 APIs
   - Node Js
   - Express Js 
@@ -43,7 +47,9 @@ I develop:
 
 - School Admin App:
   Built with C++ using wxWidegts library, allows basic course registration, student profile management. supports Windows, MacOS, Linux
-  
+
+- JavaCard Access control
+  Built with java card SDK for NFC/RFID cards. A desktop application using SWING Java for writing data.
 
 - 👤 DB admin app:
   A desktop application that can be used to manage MySQL and MongoDB databases. A GUI solution to work with both MySQL and MongoDB from a single      application.
