@@ -1,6 +1,6 @@
  Hi this is Mohi.
 --------------
-## I am a computer programmer 
+## I am a Engineer and computer programmer 
 
 I develop:
 - 📱 Mobile apps
