@@ -17,6 +17,14 @@ I develop:
   - RTOS
   - Wifi, BLE, MQTTT
   - Embedded C language
+    
+- ComputationalDesign
+  - Convolution
+  - Geometry algorithms
+  - Image Kernels
+  - Finite Elements 
+  
+ 
 - 📪 APIs
   - Node Js
   - Express Js 
