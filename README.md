@@ -3,40 +3,13 @@
 ## I am an Electronics Engineer and computer programmer 
 
 I develop:
-- 📱 Mobile apps
-  - React Native
-  - Android (SDK) (Kotlin programming Language)
-  - iOS Apps (Swift)
-- 💻 desktop applications 
-  - Electron Js 
-  - wxWidgets C++
-  - Swing Java 
-  - .NET (WPF UWP)
-  - Cocoa (Swift)
-- IoT 📱💡
-  - RTOS
-  - Wifi, BLE, MQTTT
-  - Embedded C language
-    
-- ComputationalDesign
-  - Convolution
-  - Geometry algorithms
-  - Image Kernels
-  - Finite Elements 
-  
- 
-- 📪 APIs
-  - Node Js
-  - Express Js 
-- 🌐 web applications
-  - Vue JS 
-  - Nuxt JS
-- 🛢 Databases 
-  - MySQL 
-  - MongoDB
-  - SQLite
-  - MsSQL
- 
+Software for use in smart systems:
+- Mobile / Desktop software connecting to Renewable energy systems and Medical devices.
+- Computational Design systems.
+- Sensor Fusion Technologies for smart mobility and industry grade smart systems
+- Machine Learning models for scientific applications.
+- FPGA and MCU for Robotics.
+
  ## My Projects: 
  Here are some of my projects I have worked on as a developer  
  
@@ -44,17 +17,12 @@ I develop:
  An android applictaion that uses a REST API to show pollution in different places
  Techstack: Android Jetpack Compose 
             Native iOS (Swift)
- 
- - ⬛️ QR Code / Bar Code app:
- An android app that can be used to make / generate qrcode and scan qr code / bar code. User can see the link without directly openning it. 
- Techstack: Native Android (Kotlin)
- 
-- ✅ To Do List App:
-  A simple todo list android application.
-  Techstack: Native Android (Kotlin)
 
-- School Admin App:
-  Built with C++ using wxWidegts library, allows basic course registration, student profile management. supports Windows, MacOS, Linux
+- Grographic data Visualizer
+  Software to view grographic data from Lidar / Satellite Images. Perform basic computational tasks
+
+- Renewable Energy Power System Simulation / Design:
+  Simulate Power system with various blocks like BESS, FESS, PV-Arrays, Grid Connections
 
 - JavaCard Access control
   Built with java card SDK for NFC/RFID cards. A desktop application using SWING Java for writing data.
@@ -66,10 +34,6 @@ I develop:
 - 🚛 Goods Carrier App:
   An app that can be used for keeping the record of loading the truck, unload and then generate a receipt 
   Techstack: Native Android (Java)
-  
-- 🍟 Recipe App:
-  An app that can be used to post new recipes and browse new recipes based on the user's prefrences (Likes and dislikes)
-  Techstack: Native Android (Kotlin), Backend REST API (NodeJs / ExpressJs)
   
 - 📪 REST API Tool 
   A desktop application which can be used to send requests to an API and see the JSON response from the server
