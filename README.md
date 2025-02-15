@@ -13,10 +13,13 @@ Software for use in smart systems:
  ## My Projects: 
  Here are some of my projects I have worked on as a developer  
  
- - 🌬 Air quality App  :
+ - Air quality monitor :
  An android applictaion that uses a REST API to show pollution in different places
  Techstack: Android Jetpack Compose 
             Native iOS (Swift)
+
+- LIDAR system
+  system to work with lidar, measurements
 
 - Grographic data Visualizer
   Software to view grographic data from Lidar / Satellite Images. Perform basic computational tasks
@@ -27,7 +30,7 @@ Software for use in smart systems:
 - JavaCard Access control
   Built with java card SDK for NFC/RFID cards. A desktop application using SWING Java for writing data.
 
-- 👤 DB admin app:
+- DB admin app:
   A desktop application that can be used to manage MySQL and MongoDB databases. A GUI solution to work with both MySQL and MongoDB from a single      application.
   Techstack: ElectronJs, VueJs
   
