@@ -3,237 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Electronics Projects</title>
+    <title>Electronics Project Portfolio - Neobrutalism</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary-color: #007BFF;
-            --secondary-color: #6c757d;
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --text-color: #343a40;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Custom styles for Neobrutalism Theme */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0; /* Light gray background for contrast */
+            color: #1a202c; /* Dark text for high contrast */
         }
-
-        header {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin-top: 0.5rem;
-            font-size: 1.2rem;
-        }
-
         .container {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            margin: 0 auto;
+            padding: 2rem;
         }
-
-        .project-card {
-            background-color: var(--card-background);
-            border: 1px solid #e9ecef;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .header-section {
+            border-bottom: 4px solid #1a202c; /* Thick, stark black border */
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        h1 {
+            color: #1a202c; /* Pure black for headings */
+        }
+        .project-tile {
             display: flex;
             flex-direction: column;
-        }
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
+            min-height: 180px;
+            padding: 1.5rem;
+            background-color: #ffffff; /* Pure white background */
+            border: 4px solid #1a202c; /* Thick black border */
+            border-radius: 0; /* Sharp, unrounded corners */
 
-        .project-image-container {
+            /* Removed all transition properties for a completely static look */
+            cursor: default; /* Change cursor to default, indicating no interaction */
             position: relative;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
             overflow: hidden;
         }
+        /* Removed .project-tile:hover rules entirely */
 
-        .project-image {
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* Styles for the detail sections within each tile */
+        .detail-section {
+            margin-bottom: 1rem;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
         }
-
-        .card-content {
-            padding: 1.5rem;
-            flex-grow: 1;
+        .detail-label {
+            font-size: 0.75rem; /* Slightly larger label font */
+            font-weight: 800; /* Extra bold */
+            color: #0078D7; /* Vibrant blue for labels */
+            text-transform: uppercase;
+            letter-spacing: 0.1em; /* Wider letter spacing */
+            display: block;
+            margin-bottom: 0.25rem;
         }
-
-        .card-content h2 {
-            margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.5rem;
+        .detail-content-title {
+            font-size: 1.6rem; /* Larger, bolder titles */
+            font-weight: 900; /* Super bold */
+            color: #1a202c;
+            line-height: 1.2;
         }
-
-        .card-content p {
-            font-size: 1rem;
-            color: var(--secondary-color);
+        .detail-content-description {
+            font-size: 0.95rem; /* Slightly larger description text */
+            color: #4a5568;
+            line-height: 1.6;
         }
-
-        .tags {
-            margin-top: 1rem;
-        }
-
-        .tag {
+        .detail-content-tech {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.85rem; /* Slightly larger tech font */
+            color: #1a202c;
+            background-color: #e2e8f0; /* Light gray background for tech items */
+            padding: 0.4em 0.8em;
+            border-radius: 3px;
             display: inline-block;
-            background-color: #e9ecef;
-            color: var(--secondary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            margin-right: 0.5em;
+            margin-bottom: 0.5em;
+            border: 2px solid #0078D7; /* Vibrant blue border for tech tags */
         }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            padding: 0 1.5rem 1.5rem;
-            border-top: 1px solid #e9ecef;
+        .footer-text {
+            color: #4a5568;
         }
-
-        .project-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s ease;
-        }
-
-        .project-links a:hover {
-            color: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: #343a40;
-            color: #ffffff;
-            margin-top: 2rem;
+        .project-image {
+            width: 100%; /* Make image fill its container */
+            max-height: 120px; /* Limit image height */
+            object-fit: cover; /* Ensure image covers area without distortion */
+            border: 2px solid #1a202c; /* Black border for the image */
+            margin-bottom: 1rem; /* Space below image */
         }
     </style>
 </head>
-<body>
-
-    <header>
-        <h1>My Electronics Projects</h1>
-        <p>A showcase of my latest creations and hardware adventures.</p>
-    </header>
-
+<body class="antialiased">
     <div class="container">
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="https://via.placeholder.com/600x400/007BFF/FFFFFF?text=Smart+Home" alt="Image of a smart home automation system." class="project-image">
-            </div>
-            <div class="card-content">
-                <h2>Irrigation Controller</h2>
-                <p>An ESP32-based hub that controls lights, monitors temperature, and interacts with other IoT devices in my home network. Features a custom web interface for easy control.</p>
-                <div class="tags">
-                    <span class="tag">ESP32</span>
-                    <span class="tag">IoT</span>
-                    <span class="tag">Home Automation</span>
-                    <span class="tag">Web Interface</span>
-                </div>
-            </div>
-            <div class="project-links">
-                <a href="#">View Code</a>
-                <a href="#">Read More</a>
-            </div>
-        </div>
+        <header class="text-center py-10 header-section">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                ELECTRONICS PROJECT DOCUMENTATION
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700">
+                A structured overview of key projects in electronics and embedded systems.
+            </p>
+        </header>
 
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="https://via.placeholder.com/600x400/28a745/FFFFFF?text=LED+Matrix" alt="Image of a large LED matrix display." class="project-image">
-            </div>
-            <div class="card-content">
-                <h2>Interactive LED Matrix</h2>
-                <p>A large 64x32 LED matrix display driven by a Raspberry Pi. It can show custom animations, scrolling text, and even play simple games, all controlled via a mobile app.</p>
-                <div class="tags">
-                    <span class="tag">Raspberry Pi</span>
-                    <span class="tag">LED Matrix</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Mobile App</span>
-                </div>
-            </div>
-            <div class="project-links">
-                <a href="#">View Code</a>
-                <a href="#">Read More</a>
-            </div>
-        </div>
+        <!-- Bento Grid Layout -->
+        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-8 grid-flow-dense auto-rows-[minmax(180px,auto)]">
 
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="https://via.placeholder.com/600x400/ffc107/343a40?text=Autonomous+Rover" alt="Image of an autonomous rover." class="project-image">
-            </div>
-            <div class="card-content">
-                <h2>Line-Following Rover</h2>
-                <p>A small robotic rover that uses IR sensors to follow a black line on the floor. Built with an Arduino Uno and powered by a custom-designed PCB.</p>
-                <div class="tags">
-                    <span class="tag">Arduino</span>
-                    <span class="tag">Robotics</span>
-                    <span class="tag">Sensors</span>
-                    <span class="tag">PCB Design</span>
+            <!-- Project 1: Smart Home Automation (Larger Tile) -->
+            <div class="project-tile lg:col-span-2 lg:row-span-2">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=SMART+HOME" alt="Smart Home Hub" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: EHUB-001</span>
+                    <h2 class="detail-content-title">Smart Home Hub</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        An ESP32-based central unit for unified control of IoT devices, including lighting, climate, and security. Features a custom web interface for remote management.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">ESP32</span>
+                        <span class="detail-content-tech">MQTT</span>
+                        <span class="detail-content-tech">FreeRTOS</span>
+                        <span class="detail-content-tech">HomeKit API</span>
+                        <span class="detail-content-tech">WebSockets</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-links">
-                <a href="#">View Code</a>
-                <a href="#">Read More</a>
-            </div>
-        </div>
 
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="https://via.placeholder.com/600x400/dc3545/FFFFFF?text=Audio+Amplifier" alt="Image of a custom audio amplifier." class="project-image">
-            </div>
-            <div class="card-content">
-                <h2>Hi-Fi Audio Amplifier</h2>
-                <p>A custom-built stereo audio amplifier using class-D architecture. Designed to deliver high-quality sound in a compact and energy-efficient package. Includes a custom enclosure.</p>
-                <div class="tags">
-                    <span class="tag">Audio Electronics</span>
-                    <span class="tag">Amplifier</span>
-                    <span class="tag">Class-D</span>
-                    <span class="tag">Analog</span>
+            <!-- Project 2: Wearable Health Tracker -->
+            <div class="project-tile">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=HEALTH+TRACKER" alt="Wearable Health Tracker" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: EHTR-002</span>
+                    <h2 class="detail-content-title">Wearable Health Tracker</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        A compact, low-power wearable device for continuous monitoring of vital signs and activity data.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">BLE</span>
+                        <span class="detail-content-tech">PPG Sensor</span>
+                        <span class="detail-content-tech">Accelerometer</span>
+                        <span class="detail-content-tech">LiPo Mgmt</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-links">
-                <a href="#">View Schematics</a>
-                <a href="#">Read More</a>
+
+            <!-- Project 3: Robotic Arm Controller -->
+            <div class="project-tile">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=ROBOTIC+ARM" alt="Robotic Arm Controller" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: ERAC-003</span>
+                    <h2 class="detail-content-title">Robotic Arm Controller</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        A precise multi-axis control system for a collaborative robotic arm, featuring inverse kinematics.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">Arduino Mega</span>
+                        <span class="detail-content-tech">Servo Control</span>
+                        <span class="detail-content-tech">I2C Comm.</span>
+                        <span class="detail-content-tech">Python GUI</span>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <!-- Project 4: Solar Power Management (Larger Tile) -->
+            <div class="project-tile lg:col-span-2">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=SOLAR+POWER" alt="Solar Power Management System" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: ESPM-004</span>
+                    <h2 class="detail-content-title">Solar Power Management System</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        An intelligent Maximum Power Point Tracking (MPPT) system for optimizing solar energy harvesting and battery charging, with remote monitoring capabilities.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">MPPT Algorithm</span>
+                        <span class="detail-content-tech">Buck Converter</span>
+                        <span class="detail-content-tech">Voltage Sensors</span>
+                        <span class="detail-content-tech">STM32</span>
+                        <span class="detail-content-tech">LoRaWAN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Drone Flight Controller -->
+            <div class="project-tile">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=DRONE+FLIGHT" alt="Drone Flight Controller" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: EDFL-005</span>
+                    <h2 class="detail-content-title">Drone Flight Controller</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        Custom firmware and PCB design for a quadcopter flight controller with autonomous navigation capabilities.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">IMU</span>
+                        <span class="detail-content-tech">GPS Module</span>
+                        <span class="detail-content-tech">PID Control</span>
+                        <span class="detail-content-tech">Custom PCB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: IoT Weather Station -->
+            <div class="project-tile">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=WEATHER+STATION" alt="IoT Weather Station" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: EIWS-006</span>
+                    <h2 class="detail-content-title">IoT Weather Station</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        A Raspberry Pi-based weather station collecting real-time environmental data and pushing to a cloud platform.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">Raspberry Pi</span>
+                        <span class="detail-content-tech">BME280</span>
+                        <span class="detail-content-tech">AWS IoT Core</span>
+                        <span class="detail-content-tech">Python Scripting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7: Smart Irrigation System (Larger Tile) -->
+            <div class="project-tile lg:row-span-2">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=IRRIGATION" alt="Smart Irrigation System" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: EISM-007</span>
+                    <h2 class="detail-content-title">Smart Irrigation System</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        An automated watering system that optimizes water usage based on soil moisture levels, real-time weather data, and predictive algorithms to conserve water.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">NodeMCU</span>
+                        <span class="detail-content-tech">Capacitive Sensor</span>
+                        <span class="detail-content-tech">Relay Module</span>
+                        <span class="detail-content-tech">Blynk IoT</span>
+                        <span class="detail-content-tech">Weather API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: Audio Synthesizer -->
+            <div class="project-tile">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=SYNTHESIZER" alt="Audio Synthesizer" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: EASI-008</span>
+                    <h2 class="detail-content-title">Audio Synthesizer</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        A digital sound synthesizer with multiple waveforms and effects, controlled via a custom interface.
+                    </p>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">Teensy 4.1</span>
+                        <span class="detail-content-tech">Audio Library</span>
+                        <span class="detail-content-tech">DAC</span>
+                        <span class="detail-content-tech">MIDI Input</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9: LED Matrix Display -->
+            <div class="project-tile">
+                <img src="https://placehold.co/400x120/1a202c/e2e8f0?text=LED+DISPLAY" alt="LED Matrix Display" class="project-image">
+                <div class="detail-section">
+                    <span class="detail-label">PROJECT ID: ELMD-009</span>
+                    <h2 class="detail-content-title">LED Matrix Display</h2>
+                </div>
+                <div class="detail-section">
+                    <span class="detail-label">DESCRIPTION:</span>
+                    <p class="detail-content-description">
+                        A large-scale programmable LED matrix display for dynamic text, animations, and graphic visualizations.
+                    </p>
+                <div class="detail-section">
+                    <span class="detail-label">KEY TECHNOLOGIES:</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <span class="detail-content-tech">ESP8266</span>
+                        <span class="detail-content-tech">WS2812B LEDs</span>
+                        <span class="detail-content-tech">FastLED</span>
+                        <span class="detail-content-tech">Web Interface</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center py-6 footer-text text-sm mt-8 border-t border-gray-400 pt-8">
+            <p>&copy; 2025 [YOUR NAME]. ALL RIGHTS RESERVED. | DOCUMENT REVISION: 1.0</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>Created with passion by a hardware enthusiast.</p>
-    </footer>
-
 </body>
 </html>
